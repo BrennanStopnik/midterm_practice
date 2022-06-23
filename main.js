@@ -143,14 +143,16 @@ console.log(duplicate([1,7,32,1,10,2,11]));
 console.log("\n");
 
 
-// function duplicates(arr){
-//     let counts = [];
-//     for (let i = 0; i < arr.length; i++){
-//         if (counts[arr[i]] === undefined) {
-//             counts[arr[i]] = 1;
-//         } else {
-//             return true;
-//         }
-//     }
-//     return false;
-// }
+// Alternate version of the same answer.
+
+function duplicates(arr){
+    let counts = [];
+    for (let i = 0; i < arr.length; i++){
+        if (counts[arr[i]] === undefined) {
+            counts[arr[i]] = 1;
+        } else {
+            return true;
+        }
+    }
+    return false;
+}
