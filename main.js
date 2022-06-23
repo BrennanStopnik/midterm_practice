@@ -113,6 +113,7 @@ function stringCompareCounter(str1, str2){
 console.log(stringCompareCounter('cat','cow'));
 console.log(stringCompareCounter('count','touch'));
 console.log(stringCompareCounter('well','sell'));
+console.log(stringCompareCounter('teach', 'reach'));
 
 
 /*
