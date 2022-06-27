@@ -19,6 +19,8 @@ resultArray: [3,19,8,3]
 console.log("\n1. Blend Arrays");
 function blendedFam(arr1, arr2){
     let res = [];
+    console.log(`Array 1: ${arr1}`);
+    console.log(`Array 2: ${arr2}`);
     for (let i = 0; i < arr1.length; i++){
         res.push(arr1[i]);
         res.push(arr2[i]);
@@ -63,6 +65,7 @@ return an array with the same numbers, but all 1's removed
 */
 console.log("\n3. Odd Ones Out")
 function oddOnesOut(arr){
+    console.log(`Original Array: ${arr}`);
     let newArr = arr.filter(function(n){
         return n !== 1;
     })
@@ -81,16 +84,23 @@ and returns the string
 'hello world' => 'h e l l o   w o r l d'
 */
 console.log("\n4. Space");
-function space(str1){
-    let arr = str1.split("");
-    let newStr = arr.join(" ");
-    return newStr;
+function space(str){
+    let x = "";
+    for (let i = 0; i < str.length; i++){
+        x = x + str[i] + " ";
+    }
+    return x;
 }
 console.log(space("string"));
 console.log(space("wow"));
 console.log(space("hello world"));
 
-
+// Alternate method with same answer:
+function spaces(str){
+    let arr = str.split("");
+    let newStr = arr.join(" ");
+    return newStr;
+}
 /*
 5. Write a function called stringCompareCounter that takes in 2 strings of the same length
 as parameters.  return a count of how many characters the strings share at the same index
@@ -103,6 +113,8 @@ stringCompareCounter('well','sell') => 3 (strings share same characters at index
 console.log("\n5. String Compare Counter");
 function stringCompareCounter(str1, str2){
     let count = 0;
+    console.log(`String 1: ${str1}`);
+    console.log(`String 2: ${str2}`);
     for (let i = 0; i < str1.length; i++){
         if (str1[i] === str2[i]){
             count += 1;
