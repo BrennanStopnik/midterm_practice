@@ -19,3 +19,20 @@ function addStrIfLastS(arr, str){
 }
 console.log(addStrIfLastS(['test', 'testing', 'testings'], 'TEST'));
 console.log(addStrIfLastS(['you', 'should', 'not', 'see'], 'TEST'));
+
+// Alternate way of doing this with a new array
+
+function addStringIfLastS(arr, str){
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++){
+        let arrStr = arr[i];
+        if (arrStr[arrStr.length -1] === 's' || arrStr[arrStr.length -1] === 'S'){
+            newArr.push(arr[i].concat(str));
+        } else {
+            newArr.push(arr[i])
+        }
+    } 
+    return newArr;
+}
+console.log(addStringIfLastS(['test', 'testing', 'testings'], 'TEST'));
+console.log(addStringIfLastS(['you', 'should', 'not', 'see'], 'TEST'));
