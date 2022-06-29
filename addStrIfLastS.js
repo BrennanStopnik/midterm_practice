@@ -9,7 +9,13 @@ addStringIfLastS(['you', 'should', 'not', 'see'], 'TEST')) //['you', 'should', '
 */
 
 function addStrIfLastS(arr, str){
-
+    for (let i = 0; i < arr.length; i++){
+        let arrStr = arr[i];
+        if (arrStr[arrStr.length -1] === 's' || arrStr[arrStr.length -1] === 'S'){
+            arr[i] = arr[i].concat(str);
+        } 
+    } 
+    return arr;
 }
-addStrIfLastS(['test', 'testing', 'testings'], 'TEST');
-addStrIfLastS(['you', 'should', 'not', 'see'], 'TEST');
+console.log(addStrIfLastS(['test', 'testing', 'testings'], 'TEST'));
+console.log(addStrIfLastS(['you', 'should', 'not', 'see'], 'TEST'));
